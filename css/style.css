@@ -7,6 +7,10 @@
 }
 
 
+.about img{
+    max-width: 70% !important;
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
