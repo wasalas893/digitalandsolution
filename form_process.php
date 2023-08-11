@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['email'])) {
 
-    // REPLACE THIS 2 LINES AS YOU DESIRE
+    // Replace these 2 lines as you desire
     $email_to = "wasalas893@gmail.com";
     $email_subject = "You've got a new submission";
 
@@ -48,13 +48,6 @@ if (isset($_POST['email'])) {
     }
 
     $email_message = "Form details following:\n\n";
-
-    function clean_string($string)
-    {
-        $bad = array("content-type", "bcc:", "to:", "cc:", "href");
-        return str_replace($bad, "", $string);
-    }
-
     $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
@@ -63,13 +56,15 @@ if (isset($_POST['email'])) {
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);
-?>
 
-    <!-- Replace this as your success message -->
+    $mail_success = mail($email_to, $email_subject, $email_message, $headers);
 
-    Thanks for contacting us, we will get back to you as soon as possible.
-
-<?php
+    if ($mail_success) {
+        echo "Thanks for contacting us, we will get back to you as soon as possible.";
+    } else {
+        echo "Oops! Something went wrong and we couldn't send your message.";
+    }
 }
 ?>
+
+<!-- Your HTML form should go here -->
