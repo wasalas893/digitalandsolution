@@ -6,6 +6,12 @@
     --dark: #04000B;
 }
 
+.service-item:hover {
+    margin-top: -15px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(to right,#0368d6, #01d155) !important;
+}
+
 
 .about img{
     max-width: 70% !important;
