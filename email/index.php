@@ -15,7 +15,7 @@
     $message = !empty($_POST["message"]) ? $_POST["message"] : '';
    
  
-    $to = "wasalas893@gmail.com";
+    $to = "digitalcontactsolutions@gmail.com";
     $from = $email;
     $subject = 'Inquiry - Digital & Solution';
 
