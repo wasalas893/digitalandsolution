@@ -11,6 +11,31 @@
     max-width: 70% !important;
 }
 
+label.error {
+    font-size: 14px;
+    color: #a53737;
+    font-family: 'Verdana';
+    letter-spacing: 0.3px;
+  }
+  #success, #error {
+    display:none
+}
+
+div#success {
+    background-color: #daffdd;
+    margin-top: 10px;
+    padding: 0px 15px;
+    border: 1px solid #10802c;
+    padding-top: 12px;
+}
+
+div#error {
+     background-color: #ffdada;
+     margin-top: 10px;
+     padding: 0px 15px;
+     border: 1px solid #801010;
+     padding-top: 12px;
+}
 /*** Spinner ***/
 #spinner {
     opacity: 0;
