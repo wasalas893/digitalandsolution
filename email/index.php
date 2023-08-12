@@ -5,7 +5,7 @@
         echo json_encode(['status'=>'error', 'message'=>'invalid request']); die();
     }
 
-    if (empty($_POST["name"]) or empty($_POST["phone"]) or empty($_POST["email"])) {
+    if (empty($_POST["name"]) or  empty($_POST["email"])) {
         echo json_encode(['status'=>'error', 'message'=>'Please fill the required fields']); die();
     }
 
